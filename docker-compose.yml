@@ -1,0 +1,16 @@
+nginx:
+    image: nginx
+    expose:
+        #- "4280"
+    environment:
+        - "INNER_PORT="
+        - "TARGET_INNER_IP="
+        - "TARGET_INNER_PORT="
+        - "TARGET_ACC="
+        - "TARGET_IP="
+    volumes:
+        - ~/.ssh:/root/.ssh:ro
+        - .:/app
+    command: /app/install.sh
+
+
