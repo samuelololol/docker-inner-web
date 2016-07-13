@@ -13,7 +13,7 @@ nginx:
         - "TARGET_ACC=<target machine acc>"
         - "TARGET_IP=<target machine ip>"
     volumes:
-        - ~/.ssh:/root/.ssh:ro
+        - ~/.ssh:/ssh:ro
         - .:/app
     command: /app/install.sh
 
